@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch case</title>
+</head>
+<body>
+<form>
+    <input type="number" id="number">
+    <button onclick="tinhngay()">Tính số ngày</button>
+</form>
+<script>
+ function tinhngay() {
+         var day = parseInt(document.getElementById('number').value);
+         switch (day) {
+             case 1:
+             case 3:
+             case 5:
+             case 7:
+             case 8:
+             case 10:
+             case 12:
+                 alert("Tháng " + day + " có 31 ngày");
+                 break;
+             case 4:
+             case 6:
+             case 9:
+             case 11:
+                 alert("Tháng " + day + " có 30 ngày");
+                 break;
+             case 2:
+                 alert('Tháng 2 có 28 hoặc 29 ngày');
+                 break;
+             default:
+                 alert('Chưa nhập tháng hoặc tháng nhập vào không đúng');
+                 break;
+         }
+     }
+
+
+</script>
+
+</body>
+</html>
